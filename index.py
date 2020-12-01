@@ -47,7 +47,7 @@ liste_id = list_id(liste_film)
 st.write(liste_id)
 
 
-tab_size=st.sidebar.slider("Tab size", 1900, 2018, 4),
+tab_size=st.sidebar.slider("Tab size", 1, 2018, 1900),
 
 st.write(tab_size)
 
