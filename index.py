@@ -14,11 +14,15 @@ components.iframe(url)
 st.title('Recommandation Films')
 
 liste_film = ['titanic', 'The god Father', 'Film3', 'Film4']
-film = st.selectbox('select_film', liste_film, 2)
+film = st.selectbox('select_film', liste_film, 1)
+film2 = st.selectbox('select_film', liste_film, 1)
+film3 = st.selectbox('select_film', liste_film, 1)
 
 
 st.subheader('film choisi')
 st.write(film)
+st.write(film2)
+st.write(film3)
 
 data = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
 st.dataframe(data)
