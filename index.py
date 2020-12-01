@@ -9,4 +9,4 @@ import streamlit.components.v1 as components
 components.iframe("https://lechaudron.io/tag/nantes/")
 
 
-st.sidebar.slider("Choose a frame (index)", 0, len(selected_frames) - 1, 0)
+st.sidebar.success('To continue select "Run the app".')
