@@ -47,6 +47,10 @@ liste_id = list_id(liste_film)
 st.write(liste_id)
 
 
+tab_size=st.sidebar.slider("Tab size", 1, 8, 4),
+
+st.write(tab_size)
+
 
 data = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
 st.dataframe(data)
