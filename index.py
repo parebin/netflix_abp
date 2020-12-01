@@ -28,11 +28,11 @@ film_propo.append(liste_film)
 st.title('Recommandation Films')
 
 # box pour présenter les 200 films
-film = st.selectbox('select 1er film', liste_film, 2)
-film2 = st.selectbox('select 2eme film', liste_film, 2)
-film3 = st.selectbox('select 3eme film', liste_film, 2)
-film4 = st.selectbox('select 4eme film', liste_film, 2)
-film5 = st.selectbox('select 5eme film', liste_film, 2)
+film = st.selectbox('select 1er film', film_propo, 2)
+film2 = st.selectbox('select 2eme film', film_propo, 2)
+film3 = st.selectbox('select 3eme film', film_propo, 2)
+film4 = st.selectbox('select 4eme film', film_propo, 2)
+film5 = st.selectbox('select 5eme film', film_propo, 2)
 
 # ecrire les 5 films choisis
 st.subheader('film choisi')
