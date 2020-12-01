@@ -47,7 +47,7 @@ liste_id = list_id(liste_film)
 st.write(liste_id)
 
 
-tab_size=st.sidebar.slider("Tab size", 1900, 2018, 1960)
+nb_film=st.sidebar.slider("Nombre de film proposés :", 50, 200, 200)
 st.sidebar.write('Décochez les genres que vous n aimez pas')
 cls0=st.sidebar.checkbox("Drame", value=True)
 cls1=st.sidebar.checkbox("Science Fiction", value=True)
