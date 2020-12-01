@@ -49,9 +49,13 @@ st.write(liste_id)
 
 tab_size=st.sidebar.slider("Tab size", 1900, 2018, 1960)
 st.sidebar.write('Décochez les genres que vous n aimez pas')
-show_gutter=st.sidebar.checkbox("Drame", value=True)
-show_print_margin=st.sidebar.checkbox("Action", value=True)
-wrap=st.sidebar.checkbox("Amour", value=False)
+cls0=st.sidebar.checkbox("Drame", value=True)
+cls1=st.sidebar.checkbox("Science Fiction", value=True)
+cls2=st.sidebar.checkbox("Comedy", value=True)
+cls3=st.sidebar.checkbox("Documentaire", value=True)
+cls4=st.sidebar.checkbox("Mistère", value=True)
+cls6=st.sidebar.checkbox("Thriler", value=True)
+#cls7=st.sidebar.checkbox("Amour", value=True)
 
 st.write(tab_size)
 
