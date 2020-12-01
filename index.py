@@ -35,3 +35,4 @@ result = custom_radio_button(
     default="one bat",
 )
 st.write("This many: %s" % result)
+
