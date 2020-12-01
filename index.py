@@ -10,10 +10,12 @@ url = "https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
 # embed streamlit docs in a streamlit app
 components.iframe(url)
 
+df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
+liste_film = list(df_film['title'])
 
 st.title('Recommandation Films')
 
-liste_film = [' ', 'titanic', 'The god Father', 'Film3', 'Film4']
+#liste_film = [' ', 'titanic', 'The god Father', 'Film3', 'Film4']
 film = st.selectbox('select_1erfilm', liste_film, 2)
 film2 = st.selectbox('select_2ndfilm', liste_film, 2)
 film3 = st.selectbox('select_3emefilm', liste_film, 2)
