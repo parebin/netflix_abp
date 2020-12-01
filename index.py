@@ -19,12 +19,15 @@ st.title('Recommandation Films')
 film = st.selectbox('select_1erfilm', liste_film, 2)
 film2 = st.selectbox('select_2ndfilm', liste_film, 2)
 film3 = st.selectbox('select_3emefilm', liste_film, 2)
-
+film4 = st.selectbox('select_4emefilm', liste_film, 2)
+film5 = st.selectbox('select_5emefilm', liste_film, 2)
 
 st.subheader('film choisi')
 st.write(film)
 st.write(film2)
 st.write(film3)
+st.write(film4)
+st.write(film5)
 
 data = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
 st.dataframe(data)
