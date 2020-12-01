@@ -22,6 +22,3 @@ url = "https://www.imdb.com/title/tt0120338/"
 
 # embed streamlit docs in a streamlit app
 components.iframe(url)
-
-
-
