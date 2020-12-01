@@ -54,7 +54,7 @@ def list_id(liste_titre):
 
 #liste des id des films choisis
 
-if len(liste_film) == 5 :
+if ' ' is in not liste_film :
 	liste_id = list_id(liste_film)
 	st.write(liste_id)
 
