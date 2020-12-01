@@ -18,7 +18,7 @@ st.subheader('film choisi')
 st.write(film)
 
 
-url = "https://www.themoviedb.org/movie/597-titanic"
+url = "https://www.themoviedb.org/movie/597"
 
 # embed streamlit docs in a streamlit app
 components.iframe(url)
