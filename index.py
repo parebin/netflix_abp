@@ -7,3 +7,4 @@ import time
 liste_film = ['titanic', 'The god Father']
 film = st.selectbox('select_film', liste_film, 1)
 
+st.write(film)
