@@ -20,4 +20,5 @@ film = st.selectbox('select_film', liste_film, 2)
 st.subheader('film choisi')
 st.write(film)
 
-
+data = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
+st.dataframe(data)
