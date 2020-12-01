@@ -21,7 +21,9 @@ cls6=st.sidebar.checkbox("Thriler", value=True)
 #cls7=st.sidebar.checkbox("Amour", value=True)
 
 df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
+film_propo = ['__']
 liste_film = list(df_film['title'].loc[:nb_film])
+film_propo.append(liste_film)
 
 st.title('Recommandation Films')
 
