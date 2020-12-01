@@ -11,7 +11,7 @@ url = "https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
 components.iframe(url)
 
 df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
-liste_film = list(df_film['Title'])
+liste_film = list(df_film['title'])
 
 st.title('Recommandation Films')
 
