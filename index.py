@@ -30,21 +30,21 @@ st.write(film3)
 st.write(film4)
 st.write(film5)
 
-liste_film = ['film', 'film2', 'film3', 'film4', 'film5']
+liste_film = [film, film2, film3, film4, film5]
 
 # permet de retirer les id des films choisis
-#def list_id(liste_titre):
- # liste_id = []
-  #for i in liste_titre :
-   # film = i
-    #liste_id.append(int(df_film['movieId'][df_film['title'] == film]))
-  #return liste_id
+def list_id(liste_titre):
+  liste_id = []
+  for i in liste_titre :
+    film = i
+    liste_id.append(int(df_film['movieId'][df_film['title'] == film]))
+  return liste_id
 
 #liste des id des films choisis
 
-#liste_id = list_id(liste_film)
+liste_id = list_id(liste_film)
 
-st.write(liste_film)
+st.write(liste_id)
 
 
 
