@@ -55,9 +55,9 @@ wrap=st.sidebar.checkbox("Amour", value=False)
 
 st.write(tab_size)
 
-
-data = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
-st.dataframe(data)
+#test d'affichage de 
+# data = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
+# st.dataframe(data)
 
 
 def local_css(file_name):
