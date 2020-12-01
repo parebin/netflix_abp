@@ -48,9 +48,10 @@ st.write(liste_id)
 
 
 tab_size=st.sidebar.slider("Tab size", 1900, 2018, 1960)
-show_gutter=st.sidebar.checkbox("Drame", value=True),
-show_print_margin=st.sidebar.checkbox("Action", value=True),
-wrap=st.sidebar.checkbox("Amour", value=False),
+st.sidebar.write('Décochez les genres que vous n aimez pas')
+show_gutter=st.sidebar.checkbox("Drame", value=True)
+show_print_margin=st.sidebar.checkbox("Action", value=True)
+wrap=st.sidebar.checkbox("Amour", value=False)
 
 st.write(tab_size)
 
