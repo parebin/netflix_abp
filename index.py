@@ -11,7 +11,7 @@ url = "https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
 components.iframe(url)
 
 
-st.title('Recommandation Films')
+st.title('Recommandation Films, et une modif')
 
 liste_film = ['titanic', 'The god Father', 'Film3', 'Film4']
 film = st.selectbox('select_film', liste_film, 2)
