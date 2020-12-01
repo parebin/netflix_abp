@@ -54,9 +54,8 @@ def list_id(liste_titre):
 
 #liste des id des films choisis
 
-liste_id = list_id(liste_film)
-
-if len(liste_id) == 5 :
+if len(liste_film) == 5 :
+	liste_id = list_id(liste_film)
 	st.write(liste_id)
 
 
