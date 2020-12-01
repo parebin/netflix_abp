@@ -13,7 +13,7 @@ components.iframe(url)
 df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
 liste_film = list(df_film['title'])
 
-st.title('Recommandation Films, et une modif')
+st.title('Recommandation Films')
 
 # box pour présenter les 200 films
 film = st.selectbox('select 1er film', liste_film, 2)
