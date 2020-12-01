@@ -10,8 +10,18 @@ url = "https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
 # embed streamlit docs in a streamlit app
 components.iframe(url)
 
+nb_film=st.sidebar.slider("Nombre de film proposés :", 50, 200, 200)
+st.sidebar.write('Décochez les genres que vous n aimez pas')
+cls0=st.sidebar.checkbox("Drame", value=True)
+cls1=st.sidebar.checkbox("Science Fiction", value=True)
+cls2=st.sidebar.checkbox("Comedy", value=True)
+cls3=st.sidebar.checkbox("Documentaire", value=True)
+cls4=st.sidebar.checkbox("Mistère", value=True)
+cls6=st.sidebar.checkbox("Thriler", value=True)
+#cls7=st.sidebar.checkbox("Amour", value=True)
+
 df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
-liste_film = list(df_film['title'])
+liste_film = list(df_film['title'].loc[:nb_film])
 
 st.title('Recommandation Films')
 
@@ -47,17 +57,9 @@ liste_id = list_id(liste_film)
 st.write(liste_id)
 
 
-nb_film=st.sidebar.slider("Nombre de film proposés :", 50, 200, 200)
-st.sidebar.write('Décochez les genres que vous n aimez pas')
-cls0=st.sidebar.checkbox("Drame", value=True)
-cls1=st.sidebar.checkbox("Science Fiction", value=True)
-cls2=st.sidebar.checkbox("Comedy", value=True)
-cls3=st.sidebar.checkbox("Documentaire", value=True)
-cls4=st.sidebar.checkbox("Mistère", value=True)
-cls6=st.sidebar.checkbox("Thriler", value=True)
-#cls7=st.sidebar.checkbox("Amour", value=True)
 
-st.write(tab_size)
+
+
 
 #test d'affichage de 
 # data = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
