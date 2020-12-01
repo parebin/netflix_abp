@@ -13,8 +13,8 @@ components.iframe(url)
 
 st.title('Recommandation Films')
 
-liste_film = ['titanic', 'The god Father']
-film = st.selectbox('select_film', liste_film, 1)
+liste_film = ['titanic', 'The god Father', 'Film3', 'Film4']
+film = st.selectbox('select_film', liste_film, 2)
 
 
 st.subheader('film choisi')
