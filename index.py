@@ -3,10 +3,7 @@ import numpy as np
 import random
 import streamlit as st
 import time
-import streamlit.components.v1 as components
 
-# embed streamlit docs in a streamlit app
-components.iframe("https://lechaudron.io/tag/nantes/")
+liste_film = ['titanic', 'The god Father']
+film = st.selectbox('select_film', liste_film, 1)
 
-
-st.sidebar.success('To continue select "Run the app".')
