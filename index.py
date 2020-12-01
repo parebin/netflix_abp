@@ -3,8 +3,9 @@ import numpy as np
 import random
 import streamlit as st
 import time
-from bs4 import BeautifulSoup
-import requests
+import streamlit.components.v1 as components
+
+
 
 
 st.title('Recommandation Films')
@@ -19,8 +20,8 @@ st.write(film)
 
 url = "https://www.imdb.com/title/tt0120338/"
 
-pageweb = requests.get(url)
+# embed streamlit docs in a streamlit app
+components.iframe(url)
 
-scrap = BeautifulSoup(pageweb.text, "html.parser")
 
-st.image(scrap.find_all("div", attrs="poster") [0].img)
+
