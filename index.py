@@ -9,7 +9,9 @@ import streamlit.components.v1 as components
 url = "https://github.com/parebin/netflix_abp/blob/main/image.png"
 
 # embed streamlit docs in a streamlit app
-components.iframe(url)
+#components.iframe(url)
+
+st.image(url)
 
 nb_film=st.sidebar.slider("Nombre de film proposés :", 50, 200, 200)
 st.sidebar.write('Décochez les genres que vous n aimez pas')
