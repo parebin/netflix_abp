@@ -49,7 +49,7 @@ liste_film = []
 
 for i in range(0,nb_film_vu) :
   films[i] = st.selectbox('select un film', film_propo, 2)
-  liste_film = liste_film + films[i]
+  liste_film.append(films[i])
 
 
 for film in liste_film :
