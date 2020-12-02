@@ -17,13 +17,28 @@ nb_film_vu = st.sidebar.slider("Nombre de film déjà vu :", 5, 10, 5)
 
 # décocher les genres non désirés // toutes les genres sont cochés par défaut
 st.sidebar.write('Décochez les genres que vous n aimez pas')
+condition = [0, 1, 2, 3, 4, 6]
 cls0 = st.sidebar.checkbox("Drame", value=True)
+if cls0 == False : 
+  condition.remove(0)
 cls1 = st.sidebar.checkbox("Science Fiction", value=True)
+if cls1 == False : 
+  condition.remove(1)
 cls2 = st.sidebar.checkbox("Comedy", value=True)
+if cls2 == False : 
+  condition.remove(2)
 cls3 = st.sidebar.checkbox("Documentaire", value=True)
+if cls3 == False : 
+  condition.remove(3)
 cls4 = st.sidebar.checkbox("Mistère", value=True)
+if cls4 == False : 
+  condition.remove(4)
 cls6 = st.sidebar.checkbox("Thriler", value=True)
-#cls7=st.sidebar.checkbox("Amour", value=True)
+if cls6 == False : 
+  condition.remove(6)
+
+
+
 
 # filtre sur le nombre de film à proposé
 nb_film_reco=st.sidebar.slider("Nombre de film préconisés :", 3, 10, 5)
@@ -33,7 +48,7 @@ nb_film_reco=st.sidebar.slider("Nombre de film préconisés :", 3, 10, 5)
 #import de la base de film à présenter
 df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
 film_propo = [' ']
-liste_film = list(df_film['title'])
+liste_film = list(df_film['title'][df_film['cls'].apply(lambda x : x in condition)])
 film_propo = film_propo + liste_film
 
 
