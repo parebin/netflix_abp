@@ -10,6 +10,9 @@ url = "https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
 # embed streamlit docs in a streamlit app
 components.iframe(url)
 
+
+st.title('ça marche')
+
 nb_film=st.sidebar.slider("Nombre de film proposés :", 50, 200, 200)
 st.sidebar.write('Décochez les genres que vous n aimez pas')
 cls0=st.sidebar.checkbox("Drame", value=True)
