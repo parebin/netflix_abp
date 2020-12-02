@@ -13,7 +13,7 @@ components.iframe(url)
 
 
 
-nb_film_vu = st.sidebar.slider("Nombre de film déjà vu :", 3, 10, 5)
+nb_film_vu = st.sidebar.slider("Nombre de film déjà vu :", 5, 10, 5)
 st.sidebar.write('Décochez les genres que vous n aimez pas')
 cls0 = st.sidebar.checkbox("Drame", value=True)
 cls1 = st.sidebar.checkbox("Science Fiction", value=True)
@@ -23,7 +23,7 @@ cls4 = st.sidebar.checkbox("Mistère", value=True)
 cls6 = st.sidebar.checkbox("Thriler", value=True)
 #cls7=st.sidebar.checkbox("Amour", value=True)
 
-nb_film_reco=st.sidebar.slider("Nombre de film préconisés :", 5, 10, 5)
+nb_film_reco=st.sidebar.slider("Nombre de film préconisés :", 3, 10, 5)
 
 df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
 film_propo = [' ']
