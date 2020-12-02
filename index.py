@@ -5,15 +5,17 @@ import streamlit as st
 import time
 import streamlit.components.v1 as components
 
+
+# image Netflix
 url = "https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
-
-
-# embed streamlit docs in a streamlit app
 components.iframe(url)
 
 
-
+# sidebar
+# filtre nombre de film à choisir
 nb_film_vu = st.sidebar.slider("Nombre de film déjà vu :", 5, 10, 5)
+
+# décocher les genres non désirés // toutes les genres sont cochés par défaut
 st.sidebar.write('Décochez les genres que vous n aimez pas')
 cls0 = st.sidebar.checkbox("Drame", value=True)
 cls1 = st.sidebar.checkbox("Science Fiction", value=True)
@@ -23,25 +25,22 @@ cls4 = st.sidebar.checkbox("Mistère", value=True)
 cls6 = st.sidebar.checkbox("Thriler", value=True)
 #cls7=st.sidebar.checkbox("Amour", value=True)
 
+# filtre sur le nombre de film à proposé
 nb_film_reco=st.sidebar.slider("Nombre de film préconisés :", 3, 10, 5)
 
+
+
+#import de la base de film à présenter
 df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
 film_propo = [' ']
 liste_film = list(df_film['title'])
 film_propo = film_propo + liste_film
 
+
+# titre prinsipale
 st.title('Renseignez vos films déja vu')
 
-# film1 = ''
-# film2 = ''
-# film3 = ''
-# film4 = ''
-# film5 = ''
-# film6 = ''
-# film7 = ''
-# film8 = ''
-# film9 = ''
-# film10 = ''
+
 
 # if apparation selectbox avec nb_film
 
@@ -106,38 +105,8 @@ elif nb_film_vu == 10 :
 
 
 
+st.write(liste_film)
 
-# for cle, valeur in films.items() :
-#   films[cle] = st.selectbox('select un film', film_propo, 0)
-  #liste_film.append(valeur)
-
-
-for film in liste_film :
-  st.write(film)
-
-
-
-
-
-
-
-
-# box pour présenter les 200 films
-#film = st.selectbox('select 1er film', film_propo, 2)
-#film2 = st.selectbox('select 2eme film', film_propo, 2)
-#film3 = st.selectbox('select 3eme film', film_propo, 2)
-#film4 = st.selectbox('select 4eme film', film_propo, 2)
-#film5 = st.selectbox('select 5eme film', film_propo, 2)
-
-# ecrire les 5 films choisis
-# st.subheader('film choisi')
-# st.write(film)
-# st.write(film2)
-# st.write(film3)
-# st.write(film4)
-# st.write(film5)
-
-#liste_film = [film, film2, film3, film4, film5]
 
 # permet de retirer les id des films choisis
 def list_id(liste_titre):
@@ -147,11 +116,19 @@ def list_id(liste_titre):
     liste_id.append(int(df_film['movieId'][df_film['title'] == film]))
   return liste_id
 
+
 #liste des id des films choisis
 
-#if ' ' is in not liste_film :
-	#liste_id = list_id(liste_film)
-	#st.write(liste_id)
+if ' ' in liste_film :
+  st.write('Compléter tous les choix')
+else :
+
+  liste_id = list_id(liste_film)
+  st.write(liste_id)
+
+
+
+
 
 
 
