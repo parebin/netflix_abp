@@ -3,7 +3,7 @@ import numpy as np
 import random
 import streamlit as st
 # import matplotlib.pyplot as plt
-import sklearn
+import scikit-learn as sklearn
 from sklearn.neighbors import NearestNeighbors
 # from sklearn.preprocessing import StandardScaler
 import streamlit.components.v1 as components
