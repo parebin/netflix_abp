@@ -4,6 +4,8 @@ import random
 import streamlit as st
 import time
 import streamlit.components.v1 as components
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import NearestNeighbors
 
 
 # image Netflix
