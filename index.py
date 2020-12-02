@@ -30,24 +30,38 @@ film_propo = [' ']
 liste_film = list(df_film['title'])
 film_propo = film_propo + liste_film
 
-st.title('Recommandation Films')
+st.title('Renseignez vos films déja vu')
+
+
+liste_film = []
+for i in range(0,nb_film_vu) :
+  film = st.selectbox('select un film', film_propo, 2)
+  liste_film.append(film)
+
+
+for film in liste_film :
+  st.write(film)
+
+
+
+
 
 # box pour présenter les 200 films
-film = st.selectbox('select 1er film', film_propo, 2)
-film2 = st.selectbox('select 2eme film', film_propo, 2)
-film3 = st.selectbox('select 3eme film', film_propo, 2)
-film4 = st.selectbox('select 4eme film', film_propo, 2)
-film5 = st.selectbox('select 5eme film', film_propo, 2)
+#film = st.selectbox('select 1er film', film_propo, 2)
+#film2 = st.selectbox('select 2eme film', film_propo, 2)
+#film3 = st.selectbox('select 3eme film', film_propo, 2)
+#film4 = st.selectbox('select 4eme film', film_propo, 2)
+#film5 = st.selectbox('select 5eme film', film_propo, 2)
 
 # ecrire les 5 films choisis
-st.subheader('film choisi')
-st.write(film)
-st.write(film2)
-st.write(film3)
-st.write(film4)
-st.write(film5)
+# st.subheader('film choisi')
+# st.write(film)
+# st.write(film2)
+# st.write(film3)
+# st.write(film4)
+# st.write(film5)
 
-liste_film = [film, film2, film3, film4, film5]
+#liste_film = [film, film2, film3, film4, film5]
 
 # permet de retirer les id des films choisis
 def list_id(liste_titre):
