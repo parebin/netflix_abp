@@ -23,7 +23,7 @@ cls4 = st.sidebar.checkbox("Mistère", value=True)
 cls6 = st.sidebar.checkbox("Thriler", value=True)
 #cls7=st.sidebar.checkbox("Amour", value=True)
 
-nb_film_reco=st.sidebar.slider("Nombre de film préconisés :", 3, 10, 5)
+nb_film_reco=st.sidebar.slider("Nombre de film préconisés :", 5, 10, 5)
 
 df_film = pd.read_csv('https://raw.githubusercontent.com/parebin/netflix_abp/main/top_200.csv')
 film_propo = [' ']
@@ -32,28 +32,91 @@ film_propo = film_propo + liste_film
 
 st.title('Renseignez vos films déja vu')
 
-film1 = ''
-film2 = ''
-film3 = ''
-film4 = ''
-film5 = ''
-film6 = ''
-film7 = ''
-film8 = ''
-film9 = ''
-film10 = ''
+# film1 = ''
+# film2 = ''
+# film3 = ''
+# film4 = ''
+# film5 = ''
+# film6 = ''
+# film7 = ''
+# film8 = ''
+# film9 = ''
+# film10 = ''
 
-films = {film1 : '', film2 : '', film3 : '', film4 : '', film5 : '', film6 : '', film7 : '', film8 : '', film9 : '', film10 : ''}
+# if apparation selectbox avec nb_film
 
-liste_film = []
+if nb_film_vu == 5 : 
+  film1 = st.selectbox('select un film', film_propo, 0)
+  film2 = st.selectbox('select un film', film_propo, 0)
+  film3 = st.selectbox('select un film', film_propo, 0)
+  film4 = st.selectbox('select un film', film_propo, 0)
+  film5 = st.selectbox('select un film', film_propo, 0)
+  liste_film = [film1, film2, film3, film4, film5]
+elif nb_film_vu == 6 :
+  film1 = st.selectbox('select un film', film_propo, 0)
+  film2 = st.selectbox('select un film', film_propo, 0)
+  film3 = st.selectbox('select un film', film_propo, 0)
+  film4 = st.selectbox('select un film', film_propo, 0)
+  film5 = st.selectbox('select un film', film_propo, 0)
+  film6 = st.selectbox('select un film', film_propo, 0)
+  liste_film = [film1, film2, film3, film4, film5, film6]
+elif nb_film_vu == 7 :
+  film1 = st.selectbox('select un film', film_propo, 0)
+  film2 = st.selectbox('select un film', film_propo, 0)
+  film3 = st.selectbox('select un film', film_propo, 0)
+  film4 = st.selectbox('select un film', film_propo, 0)
+  film5 = st.selectbox('select un film', film_propo, 0)
+  film6 = st.selectbox('select un film', film_propo, 0)
+  film7 = st.selectbox('select un film', film_propo, 0)
+  liste_film = [film1, film2, film3, film4, film5, film6, film7]
+elif nb_film_vu == 8 :
+  film1 = st.selectbox('select un film', film_propo, 0)
+  film2 = st.selectbox('select un film', film_propo, 0)
+  film3 = st.selectbox('select un film', film_propo, 0)
+  film4 = st.selectbox('select un film', film_propo, 0)
+  film5 = st.selectbox('select un film', film_propo, 0)
+  film6 = st.selectbox('select un film', film_propo, 0)
+  film7 = st.selectbox('select un film', film_propo, 0)
+  film8 = st.selectbox('select un film', film_propo, 0)
+  liste_film = [film1, film2, film3, film4, film5, film6, film7, film8]
+elif nb_film_vu == 9 :
+  film1 = st.selectbox('select un film', film_propo, 0)
+  film2 = st.selectbox('select un film', film_propo, 0)
+  film3 = st.selectbox('select un film', film_propo, 0)
+  film4 = st.selectbox('select un film', film_propo, 0)
+  film5 = st.selectbox('select un film', film_propo, 0)
+  film6 = st.selectbox('select un film', film_propo, 0)
+  film7 = st.selectbox('select un film', film_propo, 0)
+  film8 = st.selectbox('select un film', film_propo, 0)
+  film9 = st.selectbox('select un film', film_propo, 0)
+  liste_film = [film1, film2, film3, film4, film5, film6, film7, film8, film9]
+elif nb_film_vu == 10 :
+  film1 = st.selectbox('select un film', film_propo, 0)
+  film2 = st.selectbox('select un film', film_propo, 0)
+  film3 = st.selectbox('select un film', film_propo, 0)
+  film4 = st.selectbox('select un film', film_propo, 0)
+  film5 = st.selectbox('select un film', film_propo, 0)
+  film6 = st.selectbox('select un film', film_propo, 0)
+  film7 = st.selectbox('select un film', film_propo, 0)
+  film8 = st.selectbox('select un film', film_propo, 0)
+  film9 = st.selectbox('select un film', film_propo, 0)
+  film10 = st.selectbox('select un film', film_propo, 0)
+  liste_film = [film1, film2, film3, film4, film5, film6, film7, film8, film9, film10]
 
-for cle, valeur in films.items() :
-  films[cle] = st.selectbox('select un film', film_propo, 2)
+
+
+
+
+# for cle, valeur in films.items() :
+#   films[cle] = st.selectbox('select un film', film_propo, 0)
   #liste_film.append(valeur)
 
 
 for film in liste_film :
   st.write(film)
+
+
+
 
 
 
