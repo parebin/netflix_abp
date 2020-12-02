@@ -65,8 +65,8 @@ elif nb_film_vu == 7 :
   film3 = st.selectbox('select 3eme film', film_propo, 0)
   film4 = st.selectbox('select 4eme film', film_propo, 0)
   film5 = st.selectbox('select 5eme film', film_propo, 0)
-  film6 = st.selectbox('select 5eme film', film_propo, 0)
-  film7 = st.selectbox('select 6eme film', film_propo, 0)
+  film6 = st.selectbox('select 6eme film', film_propo, 0)
+  film7 = st.selectbox('select 7eme film', film_propo, 0)
   liste_film = [film1, film2, film3, film4, film5, film6, film7]
 elif nb_film_vu == 8 :
   film1 = st.selectbox('select 1er film', film_propo, 0)
