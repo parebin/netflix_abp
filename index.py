@@ -3,11 +3,12 @@ import numpy as np
 import random
 import streamlit as st
 import time
-from sklearn import datasets
+import matplotlib.pyplot as plt
+#from sklearn import datasets
 
 import streamlit.components.v1 as components
-# from sklearn.preprocessing import StandardScaler
-# from sklearn.neighbors import NearestNeighbors
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import NearestNeighbors
 
 
 # image Netflix
