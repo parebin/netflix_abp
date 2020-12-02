@@ -1,7 +1,7 @@
 
 $ pip install sklearn
-
 import sklearn
+import scikit_learn
 import pandas as pd
 import numpy as np
 import random
