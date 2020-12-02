@@ -32,11 +32,24 @@ film_propo = film_propo + liste_film
 
 st.title('Renseignez vos films déja vu')
 
+film1 = ''
+film2 = ''
+film3 = ''
+film4 = ''
+film5 = ''
+film6 = ''
+film7 = ''
+film8 = ''
+film9 = ''
+film10 = ''
+
+films = [film1, film2, film3, film4, film5, film6, film7, film8, film9, film10]
 
 liste_film = []
+
 for i in range(0,nb_film_vu) :
-  film[i] = st.selectbox('select un film', film_propo, 2)
-  liste_film.append(film[i])
+  films[i] = st.selectbox('select un film', film_propo, 2)
+  liste_film = liste_film + films[i]
 
 
 for film in liste_film :
