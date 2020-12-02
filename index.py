@@ -43,13 +43,13 @@ film8 = ''
 film9 = ''
 film10 = ''
 
-films = [film1, film2, film3, film4, film5, film6, film7, film8, film9, film10]
+films = {film1 : '', film2 : '', film3 : '', film4 : '', film5 : '', film6 : '', film7 : '', film8 : '', film9 : '', film10 : ''}
 
 liste_film = []
 
-for i in range(0,nb_film_vu) :
-  films[i] = st.selectbox('select un film', film_propo, 2)
-  liste_film.append(films[i])
+for cle, valeur in films.items() :
+  films[cle] = st.selectbox('select un film', film_propo, 2)
+  liste_film.append(valeur)
 
 
 for film in liste_film :
